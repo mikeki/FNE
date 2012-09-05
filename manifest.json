@@ -1,0 +1,16 @@
+{
+  "name": "Facebook Navigation Enhancement",
+  "version": "1.1.11",
+  "description": "Extension to navigate more easily through facebook.",
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": ["http://www.facebook.com/*", "https://www.facebook.com/*"],
+      "js": ["jquery.js","fne.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
